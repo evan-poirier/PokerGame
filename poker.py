@@ -848,8 +848,11 @@ while status=='play':
 
     pot.set_blinds()
 
-    print ('Hand#'+str(table.hands))
-    print ('Blinds: '+str(BLINDS))
+    print ('-------------------- Hand #' + str(table.hands) + '--------------------')
+    print ('\n')
+    print ('Small Blind: ' + str(BLINDS[0]))
+    print ('Big Blind: ' + str(BLINDS[1]))
+    print ('\n')
     
     ante_up(pot)
 
@@ -893,6 +896,10 @@ while status=='play':
     
           
     print('\n\n\n')
+
+    #makes the game stop before the next round
+    var = input("Enter anything to continue: ")
+    print("continuing" + var)
     
     next_hand(table, deck)
     
